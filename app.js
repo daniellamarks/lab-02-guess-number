@@ -6,8 +6,8 @@ const input = document.getElementById('user-input');
 const button = document.getElementById('guess-button');
 let guessOutput = document.getElementById('guess-output');
 
-const correctNumber = Math.floor((Math.random() * 20) + 1);
-console.log(correctNumber);
+const correctNumber = Math.ceil((Math.random() * 20));
+console.log(correctNumber)
 
 let triesRemaining = 5;
 
@@ -15,16 +15,19 @@ console.log(triesRemaining)
 
 button.addEventListener('click', () => {
 
-    console.log('button clicked');
+    triesRemaining--;
+    console.log(triesRemaining);
+
     const inputAsNumber = Number(input.value);
-    //valueAsNumber
-    console.log(inputAsNumber);
+    console.log(inputAsNumber, correctNumber);
 
-    console.log(compareNumbers(inputAsNumber, correctNumber));
+    const comparison = compareNumbers(inputAsNumber, correctNumber);    
+    guessOutput.textContent = `$(comparison);
 
-    
-
-
+    if (triesRemaining <= 0) { 
+        guessOutput.textContent = "Try again!";
+        button.style.display = "none"
+    }
 });
 
 

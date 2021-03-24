@@ -1,6 +1,6 @@
 export function compareNumbers(guess, correctNumber) {
-    if (guess === correctNumber) return 0;
-    if (guess > correctNumber) return 1;
-    if (guess < correctNumber) return -1;
+    if (guess === correctNumber) return `you're spot on!`;
+    if (guess > correctNumber) return `you're number is too high, guess again`;
+    if (guess < correctNumber) return `you're number is too low, guess again`;
 }
 
