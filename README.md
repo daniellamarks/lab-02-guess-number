@@ -7,3 +7,13 @@
 5) Is there some state we need to initialize?
 6) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, "What happens when" for each of these events.
 7) Think about how to validate each of your steps
+
+
+generate random number using math random
+user has 4 chances
+test each guess against random number
+will keep track of if input is too high or too low
+after 5 guesses you lose
+
+create variable to 
+
