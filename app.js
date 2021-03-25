@@ -25,23 +25,23 @@ button.addEventListener('click', () => {
     const comparison = compareNumbers(inputAsNumber, correctNumber);    
 
     if (comparison === 0) {
-        guessOutput.textContent = `You win!`;
-        button.style.display = "none";
+        button.style.display = 'none';
         resetButton.classList.remove('hidden');
         resetButton.classList.add('reset');
+        return guessOutput.textContent = `You win!`;
     } else if (comparison === 1) {
         triesRemaining--;
         guessOutput.textContent = `You're number is too high. You have ${triesRemaining} tries remaining.`;
     } else if (comparison === -1) {
         triesRemaining--;
         guessOutput.textContent = `You're number is too low. You have ${triesRemaining} tries remaining.`;
-    }
-
+    } 
+    
     if (triesRemaining <= 0) { 
-        guessOutput.textContent = "Sorry, you lost!";
-        button.style.display = "none";
+        button.style.display = 'none';
         resetButton.classList.remove('hidden');
         resetButton.classList.add('reset');
+        return guessOutput.textContent = 'Sorry, you lost!';
     }
 
 });
