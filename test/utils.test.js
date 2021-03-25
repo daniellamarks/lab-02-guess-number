@@ -14,13 +14,14 @@ test('function should return 1 if the input is higher than random number', (expe
 
     const expected = 1;
     const tooHigh = compareNumbers(2, 1);
-    expect.equal(expected, tooHigh, 'number too high')
+    expect.equal(expected, tooHigh, 'number too high');
 });
 
 test('function should return -1 if input is smaller than random number', (expect) => {
 
     const expected = -1;
-    const tooLow = compareNumber(1, 2);
-    expect.equal(expected, tooLow, 'number is too low')
+    const tooLow = compareNumbers(1, 2);
+    expect.equal(expected, tooLow, 'number is too low');
 });
+
 
