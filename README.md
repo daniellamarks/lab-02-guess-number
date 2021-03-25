@@ -9,6 +9,7 @@
 7) Think about how to validate each of your steps
 
 
+dev
 Create an app that allows the user four guesses to find a number between 1 and 20 inclusive (including "1" and "20"). After each incorrect guess, tell them whether their guess was "too high" or "too low". If they guess correct, or use up all their guesses, disable further input and display an end lose or win message.
 ## HTML Setup
 1) Instructions
@@ -41,3 +42,12 @@ Create an app that allows the user four guesses to find a number between 1 and 2
                 -if there are tries remaining, loop back to beginnnig and allow click to guess again
         - if input = math.random, display you win and end game
       
+
+generate random number using math random
+user has 4 chances
+test each guess against random number
+will keep track of if input is too high or too low
+after 5 guesses you lose
+
+create variable to 
+
