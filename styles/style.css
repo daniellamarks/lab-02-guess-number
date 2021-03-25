@@ -80,11 +80,12 @@ input:hover {
     color: white;
     padding: 15px;
     text-align: center;
+    margin: 0;
 }
 
       
 button {
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 .hidden {
