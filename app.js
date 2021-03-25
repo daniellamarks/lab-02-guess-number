@@ -23,23 +23,39 @@ button.addEventListener('click', () => {
     // console.log(inputAsNumber, correctNumber);
 
     const comparison = compareNumbers(inputAsNumber, correctNumber);    
-    guessOutput.textContent = `${comparison} You have ${triesRemaining} tries remaining.`;
+
+    if (comparison === 0) {
+        guessOutput.textContent = `You win!`;
+        button.style.display = "none";
+        resetButton.classList.remove('hidden');
+        resetButton.classList.add('reset');
+    }
+
+    if (comparison === 1) {
+        guessOutput.textContent = `You're number is too high. You have ${triesRemaining} tries remaining.`;
+    }
+
+    if (comparison === -1) {
+        guessOutput.textContent = `You're number is too low. You have ${triesRemaining} tries remaining.`;
+    }
 
     if (triesRemaining <= 0) { 
         guessOutput.textContent = "Sorry, you lost!";
-        button.style.display = "none"
-        resetButton.classList.remove('hidden')
-    }
-
-    if (inputAsNumber === correctNumber) {
-        guessOutput.textContent = `${comparison} You win!`;
         button.style.display = "none";
         resetButton.classList.remove('hidden');
+        resetButton.classList.add('reset');
     }
 
 });
 
 
+// Move UI work into functions for discrete UI updating tasks:
 
+// Decrementing tries
+// Display of too low message
+// Display of too high message
+// Disable game play
+// Display of Lose Game
+// Display of Win Game
 
 // set event listeners to update state and DOM
