@@ -6,29 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <title>Guess the Number</title>
 </head>
 
 <body>
  
     <main>
         <section class="main-section">
-           <div class="instructions" id="instructions">
+            <div class="instructions" id="instructions">
                <p>Guess a number between 1-20.  You have 5 chances to guess the correct number. </p>
             </div>
-           <div class="input">
-                <input id="user-input" type="number">
-            </div>
-           <button class="button" id="guess-button">Guess!</button>
-            <div class="guess-output" id="guess-output"></div>
+            <input id="user-input" type="number">
+            <button class="button" id="guess-button">Guess!</button>
+            <p class="guess-output" id="guess-output"></p>
             <a href="./index.html"><button class="hidden" id="reset-button">Reset Game!</button></a>
         </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        <div class="copy gutter-right">&copy; 2021 dm</div>
     </footer>
 
     <script type="module" src="app.js"></script>

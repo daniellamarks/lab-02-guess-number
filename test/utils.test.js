@@ -3,35 +3,25 @@ import { compareNumbers } from '../utils.js';
 
 const test = QUnit.test;
 
-test('function should take in the user string-turned integer and compare it to randomly generated number', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const correct = compareNumbers(1, 1);
-    const tooHigh = compareNumbers(5, 2);
-    const tooLow = compareNumbers(5, 6);
+test('function should return 0 if input and random number are the same', (expect) => {
     
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
+    const expected = 0;
+    const theSame = compareNumbers(1, 1);
+    expect.equal(expected, theSame, 'the guess is correct');
+});
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    // (actual, expect, descriptor)
-    expect.equal(correct, 0, 'your guess is correct');
-    expect.equal(tooHigh, 1, 'guess is too high');
-    expect.equal(tooLow, -1, 'guess is too low');
+test('function should return 1 if the input is higher than random number', (expect) => {
+
+    const expected = 1;
+    const tooHigh = compareNumbers(2, 1);
+    expect.equal(expected, tooHigh, 'number too high');
+});
+
+test('function should return -1 if input is smaller than random number', (expect) => {
+
+    const expected = -1;
+    const tooLow = compareNumbers(1, 2);
+    expect.equal(expected, tooLow, 'number is too low');
 });
 
 
-//We will need to know whether the user's guess is correct, too low, or too high.
-
-// TDD a compareNumbers function that:
-
-// Has two parameters: guess and correctNumber
-// Returns one of the following values:
-// 0 - the numbers are identical
-// -1 - the guessed number is too low
-// 1 - the guessed number is too high
-// Write one test at a time, each test should address one of the three possible outcomes.
-
-// You can assume valid input, meaning the passed input will always be a number.
